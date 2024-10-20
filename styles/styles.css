@@ -52,35 +52,64 @@ header, footer {
     color: #f9f9f9;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-}
-
 h1 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
-    cursor: pointer;
 }
 
-h1:hover {
-    color: rgb(0, 0, 0);
+h2 {
+    text-align: center;
+    padding: 5px;
 }
 
-li {
-    display: flex;
-    padding: 20px;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 1px;
-    border: 3px solid #4a4a4a;
-    width: 50vh;
+h3 {
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    color: #4a4a4a;
+    text-shadow: 1px 2px 2px black;
 }
 
-li:hover {
-    border: 3px dashed #4a4a4a;
+h2:hover {
+    color: red;
+}
+ul li {
+    font-size: 20px;
+    text-align: start;
+    list-style-position: inside;
+    color: black;
+    line-height: 2;
+    list-style-type: square;
+    margin: 10px;
+}
+
+ol li {
+    font-size: 20px;
+    text-align: start;
+    list-style-position: inside;
+    color: black;
+    line-height: 2;
+    margin: 10px;
+}
+
+ol li::marker {
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+
+a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+#own {
+    color: white;
+}
+
+#own:hover {
+    color: black;
 }
 
 .links  a{
@@ -95,17 +124,77 @@ a:hover {
 }
 
 figure {
-    padding: 10px;
     margin: auto;
+    text-align: center;
 }
 
 img {
     border: 5px inset black;
-    width: 500px;
+    width: 400px;
+    margin: 10px;
 }
 
 img:hover {
-    border: 5px solid red;
     cursor: pointer;
     opacity: 0.8;
+}
+
+.recipe {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+main {
+    border: 3px dashed #4a4a4a;
+    flex: 1;
+    justify-content: center;
+}
+
+nav {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+nav, aside {
+    flex: 0.5;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    color: black;
+}
+
+.description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 30px;
+    color: #4a4a4a;
+    font-size: 25px;
+    text-shadow: black;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 10px;
+}
+
+hr {
+    border: 1px dashed #4a4a4a;
+}
+
+.limited-link {
+    display: block; /* Para que o <a> funcione como um bloco */
+    max-width: 200px; /* Define a largura máxima do link */
+    overflow: hidden; /* Oculta o overflow */
+    white-space: nowrap; /* Impede que o texto quebre em múltiplas linhas */
+    text-overflow: ellipsis; /* Adiciona reticências ao final do texto se for muito longo */
+    margin: 0 auto; /* Centraliza o link na página */
+    text-align: center; /* Centraliza o texto no link */
+}
+
+.limited-link h2 {
+    margin: 0; /* Remove a margem do <h2> */
+    display: inline-block; /* Permite centralizar o texto */
 }
